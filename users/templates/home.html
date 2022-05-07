@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>View position details</title>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style type="text/css">
+    body {
+        color: #404E67;
+        background: #F5F7FA;
+  font-family: 'Open Sans', sans-serif;
+ }
+
+</style>
+<body>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-10"></div>
+        <div class="col-md-2">
+            <a href="{% url 'addData'%}" id="app_pro_btn"  class="btn btn-primary" >Add Position</a>
+        </div>
+        </div>
+    <div class="row">
+
+    {% for d in data %}
+    <div class="col-md-4 mt-5">
+        <div class="card">
+
+            <div class="card-body px-3 py-4-5">
+                <div class="row">
+
+                    <div class="col-md-4">
+                        <div class="stats-icon purple">
+                            <i class="iconly-boldShow"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <h5 class="font-semibold">{{d.position}}</h5>
+                        <h6 class="text-muted mb-0">{{d.address}}</h6>
+                        <h6 class="text-muted mb-0">{{d.time}}</h6>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    {% endfor %}
+
+
+</div>
+</div>
+
+</body>
+</html> 
+
