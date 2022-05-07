@@ -1,6 +1,8 @@
 This is a simple django project
 
 
+Youtube link : https://youtu.be/2yKA9duLSs8
+
 Frontend = html, inline css, bootstrap
 
 backend = django
